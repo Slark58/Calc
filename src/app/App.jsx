@@ -6,25 +6,24 @@ function App() {
 
 
 
-  const [value, setValue] = useState('0')
+  const [value, setValue] = useState('') 
   const [error, setError] = useState('')
 
-  const handleDefault = (e) => {
-      setValue(value => value += e.target.value) 
+  const handleDefault = (e) => { 
+      setValue(value => value =+ e.target.value) 
   }
   const handelDelete = () => {
     setValue(value.substring(0, value.length - 1) )
   }
     const handleClearAll = () => {
       setValue('')
-      setError('')
+      setError('')  
     }
 
   
 
   const handleEqually = () => {
     try {
-
       setValue(
         String(eval(value)).length > 3 && 
           String(eval(value)).includes('.') ? 
@@ -46,7 +45,7 @@ function App() {
               <div className="App-input-content">{error ? error : value}</div>
               {/* <input value={value}  type="text" className='App-input-content' readOnly/> */}
 
-
+              
               <div className="flex">
                 <button value={1} className='App-item color-num' onClick={handleDefault}>1</button>
                 <button value={2} className='App-item color-num' onClick={handleDefault}>2</button>
@@ -57,11 +56,11 @@ function App() {
                 <button value={7} className='App-item color-num' onClick={handleDefault}>7</button>
                 <button value={8} className='App-item color-num' onClick={handleDefault}>8</button>
                 <button value={9} className='App-item color-num' onClick={handleDefault}>9</button>
-                <button value={'*'} className='App-item color-symb ' onClick={handleDefault}>*</button>
+                <button value={'*'} className='App-item color-symb ' onClick={handleDefault}>x</button>
                 <button value={0} className='App-item color-num'onClick={handleDefault}>0</button>
                 <button value={'/'} className='App-item color-symb'onClick={handleDefault}>÷</button>
                 <button value={'+'} className='App-item color-symb'onClick={handleDefault}>+</button>
-                <button value={'C'} className='App-item color-symb' onClick={handleClearAll}>C</button>
+                <button value={'C'} className='App-item color-symb' onClick={handleClearAll}>C</button>  
                 <button value={'-'} className='App-item color-symb'onClick={handleDefault}>-</button>
                 <button value={','} className='App-item color-symb'onClick={handleDefault}>,</button>
                 <button value={'='} className='App-item color-symb' onClick={handleEqually}>=</button>
