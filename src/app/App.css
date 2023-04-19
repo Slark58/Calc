@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  height: 100vh;
+  background-color: #5d66afe7;
+}
+
+.App-wrapper {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;  
+}
+
+.App-content-wrapper {
+  width: 300px;
+}
+
+.App-input-content {
+  word-break:break-all;
+  font-size: 52px;
+  margin-top: 45px;
+  min-height: 30px;
+  color: white;
+  width: 300px;
+}
+
+.App-content {
+  /* margin-top: 45px; */
+  width: 300px;
+  display: flex;
+}
+
+.color-num {
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+.color-num:hover {
+  background-color: #4a4a4a;
+
+}
+.color-symb {
+  cursor: pointer;
+  color: black;
+  background-color: #ff8425;
+  transition: background 0.2s;
+}
+
+.color-symb:hover {
+  background-color: #fcac6e;
+}
+
+
+
+.App-item {
+  /* display: inline-block; */
+  font-size: 32px;
+  margin: 0px;
+  height: 100px;
+  width: 100px;
+
+
+}
+
+.App-item:active {
+  background-color: aqua;
+}
+
+.flex {
+  width: 300px;
+}
+
+
